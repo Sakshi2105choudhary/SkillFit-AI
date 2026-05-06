@@ -1,19 +1,29 @@
 SkillFit AI
 
 Overview
+
 SkillFit AI is an AI-based workforce interview platform designed to standardize candidate assessment through structured interviews.
 
 Features
+
 Candidate registration form
+
 Camera-based verification
+
 Multilingual question support (English. Hindi, Kannada)
+
 Timer-based interview system
+
 Rule based response evaluation
+
 Candidate classification (Job ready/ needs training)
 
 Tech Stack
+
 Python (Flask)
+
 HTML, CSS
+
 JavaScript
 
 How to Run
@@ -28,13 +38,19 @@ python app.py
 http://127.0.0.1:5000/
 
 Workflow
+
 User → Camera Verification → Interview → Result
 
 Future Scope
+
 AI-based response evaluation
+
 Voice input integration
+
 Multilingual answer processing
+
 Admin dashboard for analytics
 
 Author
+
 Sakshi Choudhary
