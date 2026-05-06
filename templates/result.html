@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+     <title>Result</title>
+</head>
+<body>
+    
+        <div class = "header">
+              <h1>Result</h1>
+               <div class="bubbles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+  
+<div class = "container">
+<p>Name: {{ name }}</p>
+<p>Role: {{ role }}</p>
+<p>Answer: {{ answer }}</p>
+<p>Status: {{ result }}</p>
+</div>
+</body>
+</html>

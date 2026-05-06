@@ -1,0 +1,167 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: url('/static/k.png');
+    background-size: cover;
+    
+   
+  }
+
+.header{
+    font-size: 22px;
+     height: 60px;
+    text-align: center;
+    padding: 0px;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.top-text {
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    padding: 10px; 
+}
+.content{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+}
+.container{
+    margin: 50px auto;
+    width:  480px;
+    padding: 25px;
+     font-family: 'Poppins', sans-serif;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-align: center;
+
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+      h2 {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+         h4 {
+            text-align: center;
+            margin-top: -5px;
+            color: #666;
+        }
+
+         p {
+            text-align: center;
+            font-size: 14px;
+            color: #000000;
+        }
+
+         .highlight {
+            text-align: center;
+            font-size: 13px;
+            color: #000000;
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border: 1px solid #4f46e5;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+           background: linear-gradient(to right, #4f46e5, #6366f1);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #4338ca, #4f46e5);
+        }
+}
+.bubbles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.bubbles span {
+    position: absolute;
+    bottom: -50px;
+    width: 40px;
+    height: 40px;
+    background: rgba(65, 81, 227, 0.771);
+    border-radius: 50%;
+    animation: rise 10s infinite ease-in;
+}
+
+/* Animation */
+@keyframes rise {
+    0% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+.bubbles span:nth-child(1) {
+    left: 10%;
+    animation-duration: 8s;
+}
+
+.bubbles span:nth-child(2) {
+    left: 30%;
+    animation-duration: 12s;
+    width: 20px;
+    height: 20px;
+}
+
+.bubbles span:nth-child(3) {
+    left: 50%;
+    animation-duration: 10s;
+}
+
+.bubbles span:nth-child(4) {
+    left: 70%;
+    animation-duration: 14s;
+}
+
+.bubbles span:nth-child(5) {
+    left: 90%;
+    animation-duration: 9s;
+}
+.container, .header {
+    position: relative;
+    z-index: 1;
+}

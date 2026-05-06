@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>SkillFit AI</title>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="{{ url_for('static', filename='page.css') }}">
+</head>
+<body>
+    <div class = "header">
+        <h1>SkillFit AI</h1>
+    </div>
+    <div class = "content">
+        <p>AI-powered platform to assess workforce skills through structured interviews.</p>
+    </div>
+    <div class="bubbles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div class = "container">
+    <h2>Workforce Interview Platform</h2>
+
+     <p>
+        AI-powered platform to assess workforce skills through structured video interviews.
+        Supports multilingual interaction and scalable screening.
+    </p>
+
+     <p class="highlight">
+        Fast • Scalable • Mobile-Friendly
+    </p>
+
+    <form method = "POST" action = "/selfie">
+        <!-- <button type="submit" onclick="alert('clicked')">Start Interview</button> -->
+        <label>Name</label>
+        <input type = "text" name = "name" placeholder = "Enter Your Name" required>
+        <label>Select Role</label>
+        <select name = "role">
+            <option value="" disabled selected>Select Role</option>
+            <option>Electrician</option>
+            <option>Plumber</option>
+            <option>Technician</option>
+            <option>Fitter</option>
+            <option>Others</option>
+        </select>
+            <label>Select Language</label>
+        <select name="language">
+            <option value="" disabled selected>Select Language</option>
+            <option>English</option>
+            <option>Hindi</option>
+            <option>Kannada</option>
+        </select>
+
+        <button type="submit">Start Interview</button>
+
+    </form>
+
+    </div>
+</body>
+</html>

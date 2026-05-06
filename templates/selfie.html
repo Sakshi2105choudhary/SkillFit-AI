@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='selfie.css') }}">
+    <title>Selfie</title>
+</head>
+<body>
+    <div class="header">
+            <h1>Camera Check</h1>
+        </div>
+        <div class = "content">
+        <p>Ensure Your Face Is Clearly Visible</p>
+    </div>
+    <div class="wrapper">
+       
+         <div class="camera-box">
+        <video id="video" autoplay playsinline></video>
+    </div>
+    <form method="POST" action="/interview">
+
+        <input type="hidden" name="name" value="{{ name }}">
+        <input type="hidden" name="role" value="{{ role }}">
+        <input type="hidden" name="language" value="{{ language }}">
+
+        <button type="submit">Continue to Interview →</button>
+
+    </form>
+<video id="video" autoplay playsinline></video>
+<canvas id="canvas" width="300" height="200" style="display:none;"></canvas>
+<script>
+navigator.mediaDevices.getUserMedia({ video: true })
+.then(function(stream) {
+    document.getElementById("video").srcObject = stream;
+});
+</script>
+<script>
+function capture() {
+    let video = document.getElementById("video");
+    let canvas = document.getElementById("canvas");
+    let context = canvas.getContext("2d");
+
+    context.drawImage(video, 0, 0, 300, 200);
+    alert("Photo Captured!");
+}
+</script>
+<div class="bubbles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+    </div>
+    
+    
+</body>
+</html>

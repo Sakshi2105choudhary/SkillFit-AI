@@ -1,0 +1,162 @@
+body{
+    background-image: url('/static/k.png');
+    background-size: cover; 
+    text-align: center; 
+    color: rgb(0, 0, 0); 
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+}
+.header{
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    padding: 0px;
+    background-color: blue;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.container{
+    margin: 50px auto;
+    width: 480px;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.question-box {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.main-section {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+}
+
+/* CAMERA */
+.camera-box {
+    width: 280px;
+    height: 200px;
+    background: #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ANSWER AREA */
+.answer-form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+textarea {
+    height: 250px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    resize: none;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+/* BUTTON */
+button {
+    padding: 12px;
+    background: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #4338ca;
+}
+
+.camera-box {
+    width: 100%;
+    height: 200px;
+    border: 2px dashed gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.bubbles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.bubbles span {
+    position: absolute;
+    bottom: -50px;
+    width: 40px;
+    height: 40px;
+    background: rgba(65, 81, 227, 0.771);
+    border-radius: 50%;
+    animation: rise 10s infinite ease-in;
+}
+
+/* Animation */
+@keyframes rise {
+    0% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+.bubbles span:nth-child(1) {
+    left: 10%;
+    animation-duration: 8s;
+}
+
+.bubbles span:nth-child(2) {
+    left: 30%;
+    animation-duration: 12s;
+    width: 20px;
+    height: 20px;
+}
+
+.bubbles span:nth-child(3) {
+    left: 50%;
+    animation-duration: 10s;
+}
+
+.bubbles span:nth-child(4) {
+    left: 70%;
+    animation-duration: 14s;
+}
+
+.bubbles span:nth-child(5) {
+    left: 90%;
+    animation-duration: 9s;
+}
+.container, .header {
+    position: relative;
+    z-index: 1;
+}

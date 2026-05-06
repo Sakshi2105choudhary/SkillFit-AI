@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Interview</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='interview.css') }}">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+   
+     <div class = "header">
+    <h1>Interview Started</h1>
+    </div>
+    <div class="bubbles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div class = "container">
+     <div class="question-box">
+    <h3>{{question}}</h3>
+    <p id="timer">Time left: 120s</p>
+    </div>
+    <div class="main-section">
+
+        <!-- REAL CAMERA -->
+        <div class="camera-box">
+            <video id="video" autoplay playsinline></video>
+        </div>
+        <!-- ANSWER AREA -->
+        <form method="POST" action="/result" class="answer-form">
+
+            <input type="hidden" name="name" value="{{ name }}">
+            <input type="hidden" name="role" value="{{ role }}">
+
+            <textarea name="answer" placeholder="Type your answer here..."></textarea>
+
+            <button type="submit">Submit Answer</button>
+            
+
+        </form>
+         </div>
+</div>
+    <script>
+       
+let time = 120;
+
+let timer = setInterval(function() {
+    time--;
+    document.getElementById("timer").innerText = "Time left: " + time + "s";
+
+    if (time <= 0) {
+        clearInterval(timer);
+        alert("Time's up!");
+    }
+}, 1000);
+navigator.mediaDevices.getUserMedia({ video: true })
+.then(stream => {
+    document.getElementById("video").srcObject = stream;
+});
+</script>
+
+</body>
+</html>
